@@ -21,11 +21,10 @@ RUN npm remove @shopify/cli
 # Copy the entire application code into the container
 COPY . .
 
-# Ensure the prisma directory is available and the SQLite file is created
-# This will only remove the SQLite file if it exists; consider commenting this out for production.
-RUN rm -f prisma/dev.sqlite
+# Ensure the prisma directory and schema file are available
+RUN [ -d prisma ] && [ -f prisma/sqlite.prisma ] || (echo "Prisma directory or schema file not found!" && exit 1)
 
-# Run Prisma generate to create the client, ensure the SQLite file is available
+# Run Prisma generate to create the client
 RUN npx prisma generate
 
 # Build the application
