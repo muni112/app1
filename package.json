@@ -21,7 +21,7 @@
     "vite": "vite"
   },
   "prisma": {
-    "schema": "prisma/dev.sqlite"
+    "schema": "prisma/schema.prisma"
   },
   "type": "module",
   "engines": {
