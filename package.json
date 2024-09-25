@@ -21,6 +21,9 @@
     "graphql-codegen": "graphql-codegen",
     "vite": "vite"
   },
+  "prisma": {
+  "schema": "prisma/schema.prisma"
+},
   "type": "module",
   "engines": {
     "node": "^18.20 || ^20.10 || >=21.0.0"
