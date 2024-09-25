@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "de02cdaf287f9856b069a292cb3fa7d9"
+name = "testty"
+handle = "testty-2"
+application_url = "https://shopify-gamma-six.vercel.app/"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "nws-test-3.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://shopify-gamma-six.vercel.app/auth/callback",
+  "https://shopify-gamma-six.vercel.app/auth/shopify/callback",
+  "https://shopify-gamma-six.vercel.app/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
