@@ -12,7 +12,7 @@
     "deploy": "shopify app deploy",
     "config:use": "shopify app config use",
     "env": "shopify app env",
-    "start": "remix-serve ./build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+    "start": "remix-serve ./server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
     "setup": "prisma generate && prisma migrate deploy",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "shopify": "shopify",
